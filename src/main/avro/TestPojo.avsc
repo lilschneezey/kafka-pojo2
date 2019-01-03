@@ -1,0 +1,145 @@
+{
+  "type" : "record",
+  "name" : "TestPojo",
+  "namespace" : "io.schneezey.pojo",
+  "fields" : [ {
+    "name" : "id",
+    "type" : "int"
+  }, {
+    "name" : "testPFloat",
+    "type" : "float"
+  }, {
+    "name" : "testPDouble",
+    "type" : "double"
+  }, {
+    "name" : "testPInt",
+    "type" : "int"
+  }, {
+    "name" : "testPLong",
+    "type" : "long"
+  }, {
+    "name" : "testPBoolean",
+    "type" : "boolean"
+  }, {
+    "name" : "testPBytes",
+    "type" : {
+      "type" : "bytes",
+      "java-class" : "[B"
+    }
+  }, {
+    "name" : "testNFloat",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "testNDouble",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "testNInt",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "testNLong",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "testNBoolean",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "testNBytes",
+    "type" : [ "null", {
+      "type" : "bytes",
+      "java-class" : "[B"
+    } ],
+    "default" : null
+  }, {
+    "name" : "testN1Float",
+    "type" : [ "null", "float" ],
+    "default" : null
+  }, {
+    "name" : "testN1Double",
+    "type" : [ "null", "double" ],
+    "default" : null
+  }, {
+    "name" : "testN1Int",
+    "type" : [ "null", "int" ],
+    "default" : null
+  }, {
+    "name" : "testN1Long",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "testN1Boolean",
+    "type" : [ "null", "boolean" ],
+    "default" : null
+  }, {
+    "name" : "testN1Bytes",
+    "type" : [ "null", {
+      "type" : "bytes",
+      "java-class" : "[B"
+    } ],
+    "default" : null
+  }, {
+    "name" : "testDate",
+    "type" : {
+      "type" : "long",
+      "CustomEncoding" : "DateAsLongEncoding"
+    }
+  }, {
+    "name" : "testNDate",
+    "type" : [ "null", {
+      "type" : "long",
+      "CustomEncoding" : "DateAsLongEncoding"
+    } ],
+    "default" : null
+  }, {
+    "name" : "testN1Date",
+    "type" : [ "null", {
+      "type" : "long",
+      "CustomEncoding" : "DateAsLongEncoding"
+    } ],
+    "default" : null
+  }, {
+    "name" : "subPojos",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "TestSubPojo",
+        "fields" : [ {
+          "name" : "subPFloat",
+          "type" : "float"
+        }, {
+          "name" : "subPDouble",
+          "type" : "double"
+        }, {
+          "name" : "subPInt",
+          "type" : "int"
+        }, {
+          "name" : "subPLong",
+          "type" : "long"
+        }, {
+          "name" : "subPBoolean",
+          "type" : "boolean"
+        }, {
+          "name" : "subPBytes",
+          "type" : {
+            "type" : "bytes",
+            "java-class" : "[B"
+          }
+        } ]
+      },
+      "java-class" : "java.util.ArrayList"
+    } ],
+    "default" : null
+  }, {
+    "name" : "testenum",
+    "type" : {
+      "type" : "enum",
+      "name" : "TEST_ENUM",
+      "namespace" : "io.schneezey.pojo",
+      "symbols" : [ "TYPEA", "TYPEB", "TYPEC" ]
+    }
+  } ]
+}
